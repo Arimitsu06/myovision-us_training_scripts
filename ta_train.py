@@ -1,3 +1,4 @@
+#General training script modified from https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch/
 import numpy as np
 import pandas as pd
 import time
@@ -75,7 +76,7 @@ def prepare_loaders(df, fold):
     
     return train_loader, valid_loader
 
-def set_seed(seed = 42): #From https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch/
+def set_seed(seed = 42):
     '''Sets the seed of the entire notebook so results are the same every time we run.
     This is for REPRODUCIBILITY.'''
     np.random.seed(seed)
