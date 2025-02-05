@@ -1,3 +1,4 @@
+#General training script modified from https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch/
 import numpy as np
 import pandas as pd
 import time
@@ -82,7 +83,7 @@ def prepare_loaders(df, fold):
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-def set_seed(seed = 42): #From https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch/
+def set_seed(seed = 42):
     np.random.seed(seed)
     random.seed(seed)
     torch.manual_seed(seed)
